@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { SearchBarComponent } from './search_bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    SearchBarComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [SearchBarComponent]
 })
-export class AppModule { }
+export class SearchBarModule { }

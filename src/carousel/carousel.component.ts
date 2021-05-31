@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'carousel-root',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.css']
 })
-export class AppComponent {
+export class CarouselComponent {
   title = 'scrimba2';
 }

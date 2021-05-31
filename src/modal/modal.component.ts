@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'modal-root',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
-export class AppComponent {
+export class ModalComponent {
   title = 'scrimba2';
 }

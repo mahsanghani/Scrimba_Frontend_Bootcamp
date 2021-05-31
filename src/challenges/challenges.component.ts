@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'challenges-root',
+  templateUrl: './challenges.component.html',
+  styleUrls: ['./challenges.component.css']
 })
-export class AppComponent {
+export class ChallengesComponent {
   title = 'scrimba2';
 }

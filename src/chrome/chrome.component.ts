@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'chrome-root',
+  templateUrl: './chrome.component.html',
+  styleUrls: ['./chrome.component.css']
 })
-export class AppComponent {
+export class ChromeComponent {
   title = 'scrimba2';
 }

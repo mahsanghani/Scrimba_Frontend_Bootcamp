@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { ChromeComponent } from './chrome.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ChromeComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ChromeComponent]
 })
-export class AppModule { }
+export class ChromeModule { }

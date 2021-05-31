@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { LizardsComponent } from './lizards.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    LizardsComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LizardsComponent]
 })
-export class AppModule { }
+export class LizardsModule { }

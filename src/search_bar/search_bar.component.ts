@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'search_bar-root',
+  templateUrl: './search_bar.component.html',
+  styleUrls: ['./search_bar.component.css']
 })
-export class AppComponent {
+export class SearchBarComponent {
   title = 'scrimba2';
 }
