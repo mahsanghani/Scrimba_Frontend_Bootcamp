@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { appRoutingModule } from './app.routing';
-import { AppComponent } from './app.component';
+import { BasicsComponent } from './basics.component';
+import {appRoutingModule} from "../app/app.routing";
 
 @NgModule({
   declarations: [
-    AppComponent
+    BasicsComponent
   ],
   imports: [
     BrowserModule,
     appRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [BasicsComponent]
 })
-export class AppModule {
-  /*ngDoBootstrap(app){ }*/
-}
+export class BasicsModule { }
