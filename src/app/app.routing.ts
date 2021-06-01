@@ -1,9 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {BasicsComponent} from "../basics/basics.component";
+import {TestingComponent} from "./testing/testing.component";
 
 const routes: Routes = [
   { path: '', component: AppComponent },
+  { path: 'testing', component: TestingComponent },
   { path: 'basics', component: BasicsComponent },
   /*{ path: 'blackjack', component: BlackjackComponent },
   { path: 'carousel', component: CarouselComponent },
