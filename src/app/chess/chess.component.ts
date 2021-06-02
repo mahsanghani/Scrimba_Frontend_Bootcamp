@@ -25,7 +25,7 @@ export class ChessComponent implements OnInit {
       sparePieces: true
     })
 
-/*    $('#startBtn').on('click', this.board2.start)
+    /*$('#startBtn').on('click', this.board2.start)
     $('#clearBtn').on('click', this.board2.clear)*/
   }
 }
