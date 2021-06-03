@@ -10,17 +10,18 @@ export class CounterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let countEl = document.getElementById("count-el")
-    let count = 0
+  }
 
-    function increment() {
-      count = count + 1
-      // @ts-ignore
-      countEl.innerText = String(count)
-    }
+  let countEl = document.getElementById("count-el")
+  let count = 0
 
-    function save() {
-      console.log(count)
-    }
+  function increment() {
+    count += 1
+    // @ts-ignore
+    countEl.innerText = String(count)
+  }
+
+  function save() {
+    console.log(count)
   }
 }
