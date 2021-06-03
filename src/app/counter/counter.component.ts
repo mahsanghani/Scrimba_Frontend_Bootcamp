@@ -6,22 +6,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
+  count: number;
+  countEl: number;
+  name: string;
+  greeting: string;
+  myGreeting: string;
 
-  constructor() { }
+  constructor(
+    count: number,
+    countEl: number,
+    name:string,
+    greeting:string,
+    myGreeting:string
+  ) {
+    this.count = count
+    this.countEl = countEl
+    this.name = name
+    this.greeting = greeting
+    this.myGreeting = myGreeting
+  }
 
   ngOnInit(): void {
   }
 
-  let countEl = document.getElementById("count-el")
-  let count = 0
+  name = "Per Harald Borgen"
+  greeting = "Hi, my name is "
+  myGreeting = greeting + name
+  console.log("test")
 
-  function increment() {
+  countEl = document.getElementById("count-el")
+  count = 0
+
+  increment(count: number) {
     count += 1
     // @ts-ignore
     countEl.innerText = String(count)
   }
-
-  function save() {
+  save(count: number) {
     console.log(count)
   }
 }
