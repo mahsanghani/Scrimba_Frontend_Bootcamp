@@ -11,24 +11,37 @@ export class BlackjackComponent implements OnInit {
   sum: number = 0;
   hasBlackJack: boolean = false;
   isAlive: boolean = false;
+  message: string = "";
+  messageEl: any;
+  sumEl: any;
+  cardsEl: any;
 
   constructor() { }
 
   ngOnInit(): void {
     this.firstCard = 10
     this.secondCard = 11
-    this.sum = this.firstCard + this.secondCard + 4
+    this.sum = this.firstCard + this.secondCard
     this.hasBlackJack = false
     this.isAlive = true
+    this.messageEl = document.getElementById("message-el")
+    this.sumEl = document.getElementById("sum-el")
+    this.cardsEl = document.getElementById("cards-el")
+  }
 
+  startGame(): void {
+    this.sumEl.textContent = "Sum: " + this.sum
+    this.cardsEl.textContent = "Cards: " + this.firstCard + " " + this.secondCard
     if (this.sum <= 20) {
-      console.log("Do you want to draw a new card? 🙂")
+      this.message = "Do you want to draw a new card?";
     } else if (this.sum === 21) {
-      console.log("Wohoo! You've got Blackjack! 🥳")
+      this.message = "Woohoo! You've got Blackjack!";
       this.hasBlackJack = true
     } else {
-      console.log("You're out of the game! 😭")
+      this.message = "You're out of the game!";
       this.isAlive = false
     }
+    console.log(this.message);
+    this.messageEl.textContent = this.message;
   }
 }
