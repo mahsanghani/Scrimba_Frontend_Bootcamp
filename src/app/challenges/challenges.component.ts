@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ChallengesComponent implements OnInit {
   errorParagraph: any;
   sumEl: any;
+  num1: any;
+  num2: any;
 
   constructor() {
     this.errorParagraph = ""
-    this.sumEl = ""
+    this.sumEl = document.getElementById("sum-el")
+    this.num1 = document.getElementById("num2-el")
+    this.num2 = document.getElementById("num1-el")
   }
 
   ngOnInit(): void {
@@ -56,28 +60,6 @@ export class ChallengesComponent implements OnInit {
       this.errorParagraph.textContent = "Something went wrong, please try again"
     }
 
-    let num1 = 8
-    let num2 = 2
-    document.getElementById("num1-el").textContent = num1
-    document.getElementById("num2-el").textContent = num2
-    let sumEl = document.getElementById("sum-el")
-    function add() {
-      let result = num1 + num2
-      this.sumEl.textContent = "Sum: " + result
-    }
-    function subtract() {
-      let result = num1 - num2
-      this.sumEl.textContent = "Sum: " + result
-    }
-    function divide() {
-      let result = num1 / num2
-      this.sumEl.textContent = "Sum: " + result
-    }
-    function multiply() {
-      let result = num1 * num2
-      this.sumEl.textContent = "Sum: " + result
-    }
-
     let person = {
       name: "Per",
       age: 35,
@@ -87,6 +69,26 @@ export class ChallengesComponent implements OnInit {
       console.log(person.name + " is " + person.age + " years old and lives in " + person.country)
     }
     logData()
+  }
+
+  add() {
+    let result = this.num1 + this.num2
+    this.sumEl.textContent = "Sum: " + result
+  }
+
+  subtract() {
+    let result = this.num1 - this.num2
+    this.sumEl.textContent = "Sum: " + result
+  }
+
+  division() {
+    let result = this.num1 / this.num2
+    this.sumEl.textContent = "Sum: " + result
+  }
+
+  multiply() {
+    let result = this.num1 * this.num2
+    this.sumEl.textContent = "Sum: " + result
   }
 }
 
