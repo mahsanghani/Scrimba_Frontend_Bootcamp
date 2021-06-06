@@ -17,7 +17,7 @@ export class BlackjackComponent implements OnInit {
   sumEl: any;
   cardsEl: any;
   nextCard: number = 2;
-  cards: number[];
+  cards: number[] = [];
 
   constructor() { }
 
