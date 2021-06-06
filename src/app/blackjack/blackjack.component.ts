@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {formatNumber} from "@angular/common";
 
 @Component({
   selector: 'app-blackjack',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlackjackComponent implements OnInit {
   firstCard: number = 10;
-  secondCard: number = 11;
+  secondCard: number = 9;
   sum: number = 0;
   hasBlackJack: boolean = false;
   isAlive: boolean = false;
@@ -15,12 +16,16 @@ export class BlackjackComponent implements OnInit {
   messageEl: any;
   sumEl: any;
   cardsEl: any;
+  nextCard: number = 2;
+  cards: number[];
 
   constructor() { }
 
   ngOnInit(): void {
     this.firstCard = 10
     this.secondCard = 11
+    this.nextCard = 2
+    this.cards = [this.firstCard,this.secondCard,this.nextCard]
     this.sum = this.firstCard + this.secondCard
     this.hasBlackJack = false
     this.isAlive = true
@@ -30,8 +35,12 @@ export class BlackjackComponent implements OnInit {
   }
 
   startGame(): void {
+    this.renderGame()
+  }
+
+  renderGame(): void {
+    this.cardsEl.textContent = "Cards: " + this.cards[0] + " " + this.cards[1]
     this.sumEl.textContent = "Sum: " + this.sum
-    this.cardsEl.textContent = "Cards: " + this.firstCard + " " + this.secondCard
     if (this.sum <= 20) {
       this.message = "Do you want to draw a new card?";
     } else if (this.sum === 21) {
@@ -44,4 +53,11 @@ export class BlackjackComponent implements OnInit {
     console.log(this.message);
     this.messageEl.textContent = this.message;
   }
+
+  newCard(): void {
+    console.log("Drawing a new card from the deck!");
+    this.nextCard = 11;
+    this.sum += this.nextCard
+    this.renderGame()
+    }
 }
