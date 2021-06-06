@@ -1,0 +1,24 @@
+Instructions for the First Set of Challenges
+
+/*Create two variables, firstName and lastName
+Concatenate the two variables into a third variable called fullName
+Log fullName to the console*/
+
+/*Create a function that logs out "Hi there, Linda!" when called*/
+
+/*Create two functions, add3Points() and remove1Point(), and have them
+add/remove points to/from the myPoints variable
+Call the functions to that the line below logs out 10*/
+
+/*Try to predict what each of the lines will log out*/
+
+/*When the user clicks the purchase button, render out
+"Something went wrong, please try again" in the paragraph
+that has the id="error".*/
+
+/*Create four functions: add(), subtract(), divide(), multiply()
+Call the correct function when the user clicks on one of the buttons
+Perform the given calculation using num1 and num2
+Render the result of the calculation in the paragraph with id="sum-el"
+E.g. if the user clicks on the "Plus" button, you should render
+"Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"*/

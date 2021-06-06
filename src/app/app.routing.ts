@@ -3,7 +3,7 @@ import {AppComponent} from "./app.component";
 import {BasicsComponent} from "./basics/basics.component";
 import {BlackjackComponent} from "./blackjack/blackjack.component";
 import {CarouselComponent} from "./carousel/carousel.component";
-import {ChallengesComponent} from "./challenges/challenges.component";
+import {Challenges1Component} from "./challenges1/challenges1.component";
 import {ChessComponent} from "./chess/chess.component";
 import {ChromeComponent} from "./chrome/chrome.component";
 import {CounterComponent} from "./counter/counter.component";
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'basics', component: BasicsComponent },
   { path: 'blackjack', component: BlackjackComponent },
   { path: 'carousel', component: CarouselComponent },
-  { path: 'challenges', component: ChallengesComponent },
+  { path: 'challenges1', component: Challenges1Component },
   { path: 'chess', component: ChessComponent },
   { path: 'chrome', component: ChromeComponent },
   { path: 'counter', component: CounterComponent },

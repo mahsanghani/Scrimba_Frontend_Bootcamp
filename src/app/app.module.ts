@@ -7,13 +7,14 @@ import {BasicsComponent} from "./basics/basics.component";
 import { TestingComponent } from './testing/testing.component';
 import { BlackjackComponent } from './blackjack/blackjack.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { ChallengesComponent } from './challenges/challenges.component';
+import { Challenges1Component } from './challenges1/challenges1.component';
 import { ChessComponent } from './chess/chess.component';
 import { ChromeComponent } from './chrome/chrome.component';
 import { CounterComponent } from './counter/counter.component';
 import { LizardsComponent } from './lizards/lizards.component';
 import { ModalComponent } from './modal/modal.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { Challenges2Component } from './challenges2/challenges2.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     BasicsComponent,
     BlackjackComponent,
     CarouselComponent,
-    ChallengesComponent,
+    Challenges1Component,
     ChessComponent,
     ChromeComponent,
     CounterComponent,
     LizardsComponent,
     ModalComponent,
     SearchBarComponent,
-    TestingComponent
+    TestingComponent,
+    Challenges2Component
   ],
   imports: [
     BrowserModule,
