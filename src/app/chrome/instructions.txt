@@ -1,0 +1,41 @@
+Instructions for Chrome Extension
+
+/*1. Grab the box from the DOM and store it in a variable
+2. Add a click event listener to the box
+3. Log out "I want to open the box!" when it's clicked*/
+
+/*Refactor the code so that it uses .addEventListener()
+when you click the SAVE INPUT button*/
+
+/*If possible, use const. If not, use let.
+Which variables below should be changed from let to const?
+The customer wants to order some stuff. Here are the details:
+Whops! Turns out the shipping will be a bit more complex
+Calculating the full price
+Finally, notifying the customer*/
+
+// Push the value "www.awesomelead.com" to myArray when the input button is clicked
+
+/*Push the value from the inputEl into the myLeads array
+instead of the hard-coded "www.awesomeleads.com" value
+Google -> "get value from input field javascript"*/
+
+// Log out the items in the myLeads array using a for loop
+
+// 1. Create an unordered list element (<ul>) with id="ul-el"
+// 2. Grab the unordered list and store it in a const variable called ulEl
+
+// Render the leads in the unordered list using ulEl.textContent
+
+// Use .innerHTML to render a Buy! button inside the div container
+
+// Use .innerHTML to render a Buy! button inside the div container
+
+// When clicked, render a paragraph under the button (in the container)
+// that says "Thank you for buying!"
+
+// Let's try a different method!
+// create element
+// set text content
+// append to ul
+
