@@ -39,3 +39,19 @@ Google -> "get value from input field javascript"*/
 // set text content
 // append to ul
 
+// 1. Create a variable, listItems, to hold all the HTML for the list items
+// Assign it to an empty string to begin with
+// 2. Add the item to the listItems variable instead of the ulEl.innerHTML
+// 3. Render the listItems inside the unordered list using ulEl.innerHTML
+
+// 1. Wrap the code below in a renderLeads() function
+// 2. Call the renderLeads() function
+
+// Clear out the input field
+
+// Wrap the lead in an anchor tag (<a>) inside the <li>
+// Can you make the link open in a new tab?
+
+// Refactor the code below to use a template string
+
+/* STYLE THE LIST ACCORDING TO THE DESIGN */
