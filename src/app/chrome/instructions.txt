@@ -82,3 +82,9 @@ Google -> "get value from input field javascript"*/
 // To verify that it works:
 // console.log( localStorage.getItem("myLeads") )
 
+// 1. Check if leadsFromLocalStorage is truthy
+// 2. If so, set myLeads to its value and call renderLeads()
+
+// 1. Store the delete button in a deleteBtn variable
+// 2. Listen for double clicks on the delete button (google it!)
+// 3. When clicked, clear localStorage, myLeads, and the DOM

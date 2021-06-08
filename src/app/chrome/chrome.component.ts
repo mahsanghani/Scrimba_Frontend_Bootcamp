@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChromeComponent implements OnInit {
   box: any;
   container: any;
+  deleteBtn: any;
   inputBtn: any;
   inputEl: any;
   myLeads: string[] = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
@@ -22,12 +23,18 @@ export class ChromeComponent implements OnInit {
     this.listItems = ""
     this.box = document.getElementById("box")
     this.container = document.getElementById("container")
+    this.deleteBtn = document.getElementById("delete-btn")
     this.inputBtn = document.getElementById("input-btn")
     this.inputEl = document.getElementById("input-el")
     this.ulEl = document.getElementById("ul-el")
   }
 
   ngOnInit(): void {
+    this.deleteBtn.addEventListener("dblclick", () => {
+      localStorage.clear()
+      this.myLeads = []
+      this.renderLeads()
+    })
     this.inputBtn.addEventListener("click", () => {
       console.log("Button clicked from addEventListener")
       this.myLeads.push(this.inputEl.value)
@@ -41,14 +48,18 @@ export class ChromeComponent implements OnInit {
     /*this.testLeads = JSON.parse(this.testLeads)
     this.testLeads.push("www.lead2.com")
     this.testLeads = JSON.stringify(this.testLeads)
-    console.log(typeof this.testLeads)
+    console.log(typeof this.testLeads)*/
 
     localStorage.clear()
-    let leadsFromLocalStorage = JSON.parse( localStorage.getItem("this.myLeads") )
-    console.log(leadsFromLocalStorage)*/
+    let leadsFromLocalStorage = JSON.parse( <string>localStorage.getItem("this.myLeads") )
+    console.log(leadsFromLocalStorage)
 
     localStorage.setItem("myLeads", JSON.stringify(this.myLeads) )
-    this.renderLeads()
+
+    if (leadsFromLocalStorage) {
+      this.myLeads = leadsFromLocalStorage
+      this.renderLeads()
+    }
     let name = localStorage.getItem("myName")
     console.log(name)
     localStorage.clear()
