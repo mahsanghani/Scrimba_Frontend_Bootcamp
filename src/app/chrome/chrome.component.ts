@@ -11,6 +11,7 @@ export class ChromeComponent implements OnInit {
   inputBtn: any;
   inputEl: any;
   myLeads: string[] = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+  testLeads: string = `["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]`;
   ulEl: any;
   listItems: string = "";
 
@@ -37,16 +38,20 @@ export class ChromeComponent implements OnInit {
       console.log("I want to open the box!")
     })
 
-    this.renderLeads()
+    /*this.testLeads = JSON.parse(this.testLeads)
+    this.testLeads.push("www.lead2.com")
+    this.testLeads = JSON.stringify(this.testLeads)
+    console.log(typeof this.testLeads)
 
-    const basePrice = 520
-    const discount = 120
-    let shippingCost = 12
-    let shippingTime = "5-12 days"
-    shippingCost = 15
-    shippingTime = "7-14 days"
-    const fullPrice = basePrice - discount + shippingCost
-    console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+    localStorage.clear()
+    let leadsFromLocalStorage = JSON.parse( localStorage.getItem("this.myLeads") )
+    console.log(leadsFromLocalStorage)*/
+
+    localStorage.setItem("myLeads", JSON.stringify(this.myLeads) )
+    this.renderLeads()
+    let name = localStorage.getItem("myName")
+    console.log(name)
+    localStorage.clear()
   }
 
   buy() {

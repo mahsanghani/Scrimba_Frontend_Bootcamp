@@ -55,3 +55,30 @@ Google -> "get value from input field javascript"*/
 // Refactor the code below to use a template string
 
 /* STYLE THE LIST ACCORDING TO THE DESIGN */
+
+// 1. Save a key-value pair in localStorage
+// 2. Refresh the page. Get the value and log it to the console
+// 3. Clear localStorage
+
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
+
+// 1. Turn the myLeads string into an array
+// 2. Push a new value to the array
+// 3. Turn the array into a string again
+// 4. Console.log the string using typeof to verify that it's a string
+
+// Save the myLeads array to localStorage
+// PS: remember JSON.stringify()
+// To verify that it works:
+// console.log( localStorage.getItem("myLeads") )
+
+// Get the leads from the localStorage
+// Store it in a variable, leadsFromLocalStorage
+// Log out the variable
+// To verify that it works:
+// console.log( localStorage.getItem("myLeads") )
+
