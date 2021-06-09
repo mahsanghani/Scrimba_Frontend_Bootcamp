@@ -11,16 +11,18 @@ export class ChromeComponent implements OnInit {
   deleteBtn: any;
   inputBtn: any;
   inputEl: any;
+  leads: string[]
   myLeads: string[] = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
   testLeads: string = `["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]`;
   ulEl: any;
   listItems: string = "";
 
   constructor() {
-    this.box = " "
-    this.inputBtn = " "
-    this.inputEl = " "
-    this.listItems = ""
+    this.box = "a"
+    this.inputBtn = "b"
+    this.inputEl = "c"
+    this.listItems = "d"
+    this.leads = []
     this.box = document.getElementById("box")
     this.container = document.getElementById("container")
     this.deleteBtn = document.getElementById("delete-btn")
@@ -33,7 +35,7 @@ export class ChromeComponent implements OnInit {
     this.deleteBtn.addEventListener("dblclick", () => {
       localStorage.clear()
       this.myLeads = []
-      this.renderLeads()
+      this.render(this.myLeads)
     })
     this.inputBtn.addEventListener("click", () => {
       console.log("Button clicked from addEventListener")
@@ -58,7 +60,7 @@ export class ChromeComponent implements OnInit {
 
     if (leadsFromLocalStorage) {
       this.myLeads = leadsFromLocalStorage
-      this.renderLeads()
+      this.render(this.myLeads)
     }
     let name = localStorage.getItem("myName")
     console.log(name)
@@ -69,18 +71,18 @@ export class ChromeComponent implements OnInit {
     this.container.innerHTML += "<p>Thank you for buying!</p>"
   }
 
-  renderLeads() {
-    for (let i = 0; i < this.myLeads.length; i++) {
-      this.ulEl.innerHTML = "<li><a target='_blank' href='" + this.myLeads[i] + "'>" + this.myLeads[i] + "</a></li>"
+  render(leads: string[]) {
+    for (let i = 0; i < this.leads.length; i++) {
+      this.ulEl.innerHTML = "<li><a target='_blank' href='" + this.leads[i] + "'>" + this.leads[i] + "</a></li>"
       this.listItems += `
             <li>
-                <a target='_blank' href='${this.myLeads[i]}'>
-                    ${this.myLeads[i]}
+                <a target='_blank' href='${this.leads[i]}'>
+                    ${this.leads[i]}
                 </a>
             </li>
         `
       const li = document.createElement("li")
-      li.textContent = this.myLeads[i]
+      li.textContent = this.leads[i]
       this.ulEl.append(li)
     }
     this.ulEl.innerHTML = this.listItems

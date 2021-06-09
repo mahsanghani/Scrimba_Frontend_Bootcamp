@@ -88,3 +88,7 @@ Google -> "get value from input field javascript"*/
 // 1. Store the delete button in a deleteBtn variable
 // 2. Listen for double clicks on the delete button (google it!)
 // 3. When clicked, clear localStorage, myLeads, and the DOM
+
+// Refector the function so that it takes a parameter, leads, that it uses
+// instead of the global myLeads variable. Remember to update all invocations
+// of the function as well.
