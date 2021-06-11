@@ -53,17 +53,17 @@ export class ChromeComponent implements OnInit {
     })
     this.tabBtn.addEventListener("click", () =>{
       console.log(tabs[0].url)
-      chrome.tabs.query({active: true, currentWindow: true}, (tabs: { url: string; }[]) => {
+      /*chrome.tabs.query({active: true, currentWindow: true}, (tabs: { url: string; }[]) => {
         this.myLeads.push(tabs[0].url)
         localStorage.setItem("myLeads", JSON.stringify(this.myLeads) )
         this.render(this.myLeads)
-      });
+      });*/
     })
 
-    /*this.testLeads = JSON.parse(this.testLeads)
-    this.testLeads.push("www.lead2.com")
+    this.testLeads = JSON.parse(this.testLeads)
+    // this.testLeads.push("www.lead2.com")
     this.testLeads = JSON.stringify(this.testLeads)
-    console.log(typeof this.testLeads)*/
+    console.log(typeof this.testLeads)
 
     localStorage.clear()
     let leadsFromLocalStorage = JSON.parse( <string>localStorage.getItem("this.myLeads") )
