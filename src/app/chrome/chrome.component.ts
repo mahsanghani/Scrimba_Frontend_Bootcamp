@@ -10,6 +10,7 @@ export class ChromeComponent implements OnInit {
   container: any;
   deleteBtn: any;
   inputBtn: any;
+  tabBtn: any;
   inputEl: any;
   leads: string[]
   myLeads: string[] = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
@@ -23,6 +24,7 @@ export class ChromeComponent implements OnInit {
     this.inputEl = "c"
     this.listItems = "d"
     this.leads = []
+    this.tabBtn = document.getElementById("tab-btn")
     this.box = document.getElementById("box")
     this.container = document.getElementById("container")
     this.deleteBtn = document.getElementById("delete-btn")
@@ -32,6 +34,9 @@ export class ChromeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const tabs = [
+      {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+    ]
     this.deleteBtn.addEventListener("dblclick", () => {
       localStorage.clear()
       this.myLeads = []
@@ -46,6 +51,14 @@ export class ChromeComponent implements OnInit {
     this.box.addEventListener("click", function(){
       console.log("I want to open the box!")
     })
+    this.tabBtn.addEventListener("click", () =>{
+      console.log(tabs[0].url)
+      chrome.tabs.query({active: true, currentWindow: true}, (tabs: { url: string; }[]) => {
+        this.myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(this.myLeads) )
+        this.render(this.myLeads)
+      });
+    })
 
     /*this.testLeads = JSON.parse(this.testLeads)
     this.testLeads.push("www.lead2.com")
@@ -55,7 +68,6 @@ export class ChromeComponent implements OnInit {
     localStorage.clear()
     let leadsFromLocalStorage = JSON.parse( <string>localStorage.getItem("this.myLeads") )
     console.log(leadsFromLocalStorage)
-
     localStorage.setItem("myLeads", JSON.stringify(this.myLeads) )
 
     if (leadsFromLocalStorage) {

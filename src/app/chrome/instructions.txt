@@ -92,3 +92,6 @@ Google -> "get value from input field javascript"*/
 // Refector the function so that it takes a parameter, leads, that it uses
 // instead of the global myLeads variable. Remember to update all invocations
 // of the function as well.
+
+// 1. Grab the SAVE TAB button and store it in a tabBtn variable
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
