@@ -6,66 +6,68 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emojis.component.css']
 })
 export class EmojisComponent implements OnInit {
+  myEmojis: any;
   emojiContainer: any;
   emojiInput: any;
-  popBtn: any;
   pushBtn: any;
-  shiftBtn: any;
   unshiftBtn: any;
+  popBtn: any;
+  shiftBtn: any;
 
   constructor() {
-    this.emojiContainer = "";
-    this.emojiInput = "";
-    this.popBtn = "";
-    this.pushBtn = "";
-    this.shiftBtn = "";
-    this.unshiftBtn = "";
+    this.myEmojis = ["👨‍💻", "⛷", "🍲"]
+    this.emojiContainer = document.getElementById("emoji-container")
+    this.emojiInput = document.getElementById("emoji-input")
+    this.pushBtn = document.getElementById("push-btn")
+    this.unshiftBtn = document.getElementById("unshift-btn")
+    this.popBtn = document.getElementById("pop-btn")
+    this.shiftBtn = document.getElementById("shift-btn")
   }
 
   ngOnInit(): void {
-    const myEmojis = ["👨‍💻", "⛷", "🍲"]
+    this.myEmojis = ["👨‍💻", "⛷", "🍲"]
 
     const renderEmojis = () => {
-      const emojiContainer = document.getElementById("emoji-container")
+      this.emojiContainer = document.getElementById("emoji-container")
       this.emojiContainer.innerHTML = ""
-      for (let i = 0; i < myEmojis.length; i++) {
-        const emoji = document.createElement('span')
-        emoji.textContent = myEmojis[i]
+      for (let i = 0; i < this.myEmojis.length; i++) {
+        let emoji = document.createElement('span')
+        emoji.textContent = this.myEmojis[i]
         this.emojiContainer.append(emoji)
       }
     }
 
     renderEmojis()
 
-    const pushBtn = document.getElementById("push-btn")
+    this.pushBtn = document.getElementById("push-btn")
     this.pushBtn.addEventListener("click", () =>{
-      const emojiInput = document.getElementById("emoji-input")
+      this.emojiInput = document.getElementById("emoji-input")
       if (this.emojiInput.value) {
-        myEmojis.push(this.emojiInput.value)
+        this.myEmojis.push(this.emojiInput.value)
         this.emojiInput.value = ""
         renderEmojis()
       }
     })
 
-    const unshiftBtn = document.getElementById("unshift-btn")
+    this.unshiftBtn = document.getElementById("unshift-btn")
     this.unshiftBtn.addEventListener("click", () =>{
-      const emojiInput = document.getElementById("emoji-input")
+      this.emojiInput = document.getElementById("emoji-input")
       if (this.emojiInput.value) {
-        myEmojis.unshift(this.emojiInput.value)
+        this.myEmojis.unshift(this.emojiInput.value)
         this.emojiInput.value = ""
         renderEmojis()
       }
     })
 
-    const popBtn = document.getElementById("pop-btn")
-    this.popBtn.addEventListener("click", function(){
-      myEmojis.pop()
+    this.popBtn = document.getElementById("pop-btn")
+    this.popBtn.addEventListener("click", () =>{
+      this.myEmojis.pop()
       renderEmojis()
     })
 
-    const shiftBtn = document.getElementById("shift-btn")
-    this.shiftBtn.addEventListener("click", function(){
-      myEmojis.shift()
+    this.shiftBtn = document.getElementById("shift-btn")
+    this.shiftBtn.addEventListener("click", () =>{
+      this.myEmojis.shift()
       renderEmojis()
     })
   }

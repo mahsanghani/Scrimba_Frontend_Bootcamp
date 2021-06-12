@@ -1,9 +1,20 @@
 /* 1. Loop through the myEmojis array and log each of them out to the console
 2. Grab the emojiContainer div and store it in a variable. Log it to the console
-console.log(myEmojis[i])*/
+console.log(myEmojis[i]) */
 
 /* Render the emojis as <span> tags in the emojisContainer <div>
 Hints: Use either createElement(), textContent, and append()
 or innerHTML and a template string
-write your code here*/
+write your code here */
 
+/* Hook an event listener up with the button, and log out the input field's value when it's clicked
+Push the emoji into the myEmoji's array, and clear the input field
+However, if the input value is empty, don't do anything */
+
+/* Render the updated myEmojis array in the mini-browser.
+One solution: wrap the code for rendering the emojis in a function and make sure it
+clears away old version of the array before it renders the updated one */
+
+// Make the unshift button work just as the push button (but with unshifting instead of pushing)
+
+// Make the pop and shift buttons work as well
