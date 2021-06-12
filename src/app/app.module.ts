@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-import {BasicsComponent} from "./basics/basics.component";
+import { BasicsComponent } from "./basics/basics.component";
 import { TestingComponent } from './testing/testing.component';
 import { BlackjackComponent } from './blackjack/blackjack.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -13,10 +13,10 @@ import { Challenges3Component } from './challenges3/challenges3.component';
 import { ChessComponent } from './chess/chess.component';
 import { ChromeComponent } from './chrome/chrome.component';
 import { CounterComponent } from './counter/counter.component';
+import { EmojisComponent } from './emojis/emojis.component';
 import { LizardsComponent } from './lizards/lizards.component';
 import { ModalComponent } from './modal/modal.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { EmojisComponent } from './emojis/emojis.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +30,11 @@ import { EmojisComponent } from './emojis/emojis.component';
     ChessComponent,
     ChromeComponent,
     CounterComponent,
+    EmojisComponent,
     LizardsComponent,
     ModalComponent,
     SearchBarComponent,
-    TestingComponent,
-    EmojisComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,

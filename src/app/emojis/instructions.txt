@@ -1,0 +1,9 @@
+/* 1. Loop through the myEmojis array and log each of them out to the console
+2. Grab the emojiContainer div and store it in a variable. Log it to the console
+console.log(myEmojis[i])*/
+
+/* Render the emojis as <span> tags in the emojisContainer <div>
+Hints: Use either createElement(), textContent, and append()
+or innerHTML and a template string
+write your code here*/
+
