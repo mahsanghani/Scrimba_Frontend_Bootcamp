@@ -10,6 +10,7 @@ import {ChessComponent} from "./chess/chess.component";
 import {ChromeComponent} from "./chrome/chrome.component";
 import {CounterComponent} from "./counter/counter.component";
 import {EmojisComponent} from "./emojis/emojis.component";
+import {FundamentalsComponent} from './fundamentals/fundamentals.component';
 import {LizardsComponent} from "./lizards/lizards.component";
 import {ModalComponent} from "./modal/modal.component";
 import {SearchBarComponent} from "./search-bar/search-bar.component";
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'chess', component: ChessComponent },
   { path: 'chrome', component: ChromeComponent },
   { path: 'counter', component: CounterComponent },
-  { path: 'emojis', component: EmojisComponent},
+  { path: 'emojis', component: EmojisComponent },
+  { path: 'fundamentals', component: FundamentalsComponent },
   { path: 'lizards', component: LizardsComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'search_bar', component: SearchBarComponent },
