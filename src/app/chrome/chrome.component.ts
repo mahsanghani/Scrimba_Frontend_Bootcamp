@@ -12,11 +12,11 @@ export class ChromeComponent implements OnInit {
   inputBtn: any;
   tabBtn: any;
   inputEl: any;
+  ulEl: any;
+  listItems: string = "";
   leads: string[]
   myLeads: string[] = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
   testLeads: string = `["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]`;
-  ulEl: any;
-  listItems: string = "";
 
   constructor() {
     this.box = "a"

@@ -29,5 +29,25 @@ strong {
 }
 
 .accent-color {
-  color: yellow;
+  color: #FFE600;
+}
+
+a:link {
+  color: #FFE600;
+}
+
+a:visited {
+  color: #FFE600;
+}
+
+a:focus {
+  color: aquamarine;
+}
+
+a:hover {
+  color: firebrick;
+}
+
+a:active {
+  color: plum;
 }
