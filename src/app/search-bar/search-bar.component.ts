@@ -17,17 +17,24 @@ export class SearchBarComponent implements OnInit {
       console.log(username);
     });
     // @ts-ignore
-    this.searchInput = document.getElementById("searchInput").addEventListener("keyup", function(event) {
-      // @ts-ignore
-      let searchQuery = event.target.value.toLowerCase();
-      let allNamesDOMCollection = document.getElementsByClassName('name');
-      console.log(allNamesDOMCollection[1].textContent);
-      for (let counter = 0; counter < allNamesDOMCollection.length; counter++) {
+    this.searchInput = document.getElementById("searchInput");
+    if(this.searchInput){
+      this.searchInput.addEventListener("keyup", function(event: { target: { value: string; }; }) {
         // @ts-ignore
-        const currentName = allNamesDOMCollection[counter].textContent.toLowerCase();
-        console.log(currentName);
-      }
-    });
+        let searchQuery = event.target.value.toLowerCase();
+        let allNamesDOMCollection = document.getElementsByClassName('name');
+        console.log(allNamesDOMCollection[1].textContent);
+        for (let counter = 0; counter < allNamesDOMCollection.length; counter++) {
+          // @ts-ignore
+          const currentName = allNamesDOMCollection[counter].textContent.toLowerCase();
+          if (currentName.includes(searchQuery)) {
+            // allNamesDOMCollection[counter].style.display = "block";
+          } else {
+            // allNamesDOMCollection[counter].style.display = "none";
+          }
+        }
+      });
+    }
   }
 
   ngOnInit(): void {
