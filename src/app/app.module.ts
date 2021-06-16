@@ -18,6 +18,8 @@ import { FundamentalsComponent } from './fundamentals/fundamentals.component';
 import { LizardsComponent } from './lizards/lizards.component';
 import { ModalComponent } from './modal/modal.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { Challenges4Component } from './challenges4/challenges4.component';
+import { Challenges5Component } from './challenges5/challenges5.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     ModalComponent,
     SearchBarComponent,
     TestingComponent,
+    Challenges4Component,
+    Challenges5Component,
   ],
   imports: [
     BrowserModule,
