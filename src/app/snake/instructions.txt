@@ -1,0 +1,41 @@
+//create 100 of these elements with a for loop
+//create element
+//add styling to the element
+//put the element into our grid
+//push it into a new squares array
+// @ts-ignore
+
+//remove the snake
+//remove the apple
+//re add new score to browser
+//read the class of snake to our new currentSnake
+
+//remove last element from our currentSnake array
+//remove styling from last element
+//add square in direction we are heading
+//add styling so we can see it
+
+//if snake has hit bottom
+//if snake has hit right wall
+//if snake has hit left wall
+//if snake has hit top
+
+//deal with snake head gets apple
+//remove the class of apple
+//grow our snake by adding class of snake to it
+//grow our snake array
+//generate new apple
+//add one to the score
+//display our score
+//speed up our snake
+//remove last element from our currentSnake array
+//remove styling from last element
+//add square in direction we are heading
+//add styling so we can see it
+
+//generate a random number
+
+// 39 is right arrow
+// 38 is for the up arrow
+// 37 is for the left arrow
+// 40 is for the down arrow
