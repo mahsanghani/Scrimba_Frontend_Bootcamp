@@ -24,6 +24,7 @@ import { Responsive2Component } from './responsive2/responsive2.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SnakeComponent } from './snake/snake.component';
 import { TestingComponent } from './testing/testing.component';
+import { BbqComponent } from './bbq/bbq.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { TestingComponent } from './testing/testing.component';
     SearchBarComponent,
     SnakeComponent,
     TestingComponent,
+    BbqComponent,
   ],
   imports: [
     BrowserModule,
