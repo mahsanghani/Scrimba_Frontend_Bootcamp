@@ -70,10 +70,6 @@ strong { font-weight: 900; }
   background-color: #404040;
   background-position: center;
   padding: 0 .5em 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 50vh;
 }
 
 
@@ -85,15 +81,40 @@ strong { font-weight: 900; }
   padding: 2em 1em;
 }
 
-
-
-.intro > *,
-.main-content > * {
+.container {
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+/* =================
+   form
+   ================= */
+
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: .75em;
+  padding: .25em;
+  border: 1px solid #404040;
+}
 
 /* =================
    media queries
@@ -125,4 +146,30 @@ strong { font-weight: 900; }
     flex-direction: column;
     justify-content: center;
   }
+
+  .container-intro {
+    height: 100%;
+  }
+}
+
+form {
+  background: #efefef;
+  padding: 2em;
+}
+
+input[type="text"] {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+}
+
+button {
+  background: #333;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #404040;
 }
