@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {BasicsComponent} from "./basics/basics.component";
+import {BbqComponent} from "./bbq/bbq.component";
 import {BlackjackComponent} from "./blackjack/blackjack.component";
 import {CarouselComponent} from "./carousel/carousel.component";
 import {Challenges1Component} from "./challenges1/challenges1.component";
@@ -25,6 +26,7 @@ import {TestingComponent} from "./testing/testing.component";
 const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'basics', component: BasicsComponent },
+  { path: 'bbq', component: BbqComponent},
   { path: 'blackjack', component: BlackjackComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'challenges1', component: Challenges1Component },

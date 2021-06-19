@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { BasicsComponent } from "./basics/basics.component";
+import { BbqComponent } from './bbq/bbq.component';
 import { BlackjackComponent } from './blackjack/blackjack.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { Challenges1Component } from './challenges1/challenges1.component';
@@ -24,12 +25,12 @@ import { Responsive2Component } from './responsive2/responsive2.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SnakeComponent } from './snake/snake.component';
 import { TestingComponent } from './testing/testing.component';
-import { BbqComponent } from './bbq/bbq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicsComponent,
+    BbqComponent,
     BlackjackComponent,
     CarouselComponent,
     Challenges1Component,
@@ -50,7 +51,6 @@ import { BbqComponent } from './bbq/bbq.component';
     SearchBarComponent,
     SnakeComponent,
     TestingComponent,
-    BbqComponent,
   ],
   imports: [
     BrowserModule,
