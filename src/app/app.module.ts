@@ -19,6 +19,8 @@ import { EmojisComponent } from './emojis/emojis.component';
 import { FundamentalsComponent } from './fundamentals/fundamentals.component';
 import { LizardsComponent } from './lizards/lizards.component';
 import { ModalComponent } from './modal/modal.component';
+import { Responsive1Component } from './responsive1/responsive1.component';
+import { Responsive2Component } from './responsive2/responsive2.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SnakeComponent } from './snake/snake.component';
 import { TestingComponent } from './testing/testing.component';
@@ -42,6 +44,8 @@ import { TestingComponent } from './testing/testing.component';
     FundamentalsComponent,
     LizardsComponent,
     ModalComponent,
+    Responsive1Component,
+    Responsive2Component,
     SearchBarComponent,
     SnakeComponent,
     TestingComponent,
