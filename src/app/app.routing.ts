@@ -17,6 +17,7 @@ import {EmojisComponent} from "./emojis/emojis.component";
 import {FundamentalsComponent} from './fundamentals/fundamentals.component';
 import {LizardsComponent} from "./lizards/lizards.component";
 import {ModalComponent} from "./modal/modal.component";
+import {PacmanComponent} from "./pacman/pacman.component";
 import {Responsive1Component} from "./responsive1/responsive1.component";
 import {Responsive2Component} from "./responsive2/responsive2.component";
 import {SearchBarComponent} from "./search-bar/search-bar.component";
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'fundamentals', component: FundamentalsComponent },
   { path: 'lizards', component: LizardsComponent },
   { path: 'modal', component: ModalComponent },
+  { path: 'pacman', component: PacmanComponent },
   { path: 'responsive1', component: Responsive1Component},
   { path: 'responsive2', component: Responsive2Component},
   { path: 'search_bar', component: SearchBarComponent },
