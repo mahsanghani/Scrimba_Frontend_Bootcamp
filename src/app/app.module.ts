@@ -19,6 +19,7 @@ import { Challenges5Component } from './challenges5/challenges5.component';
 import { ChessComponent } from './chess/chess.component';
 import { ChromeComponent } from './chrome/chrome.component';
 import { CounterComponent } from './counter/counter.component';
+import { DashboardComponent } from "./dashboard/dashboard.component";
 import { DiceComponent } from './dice/dice.component';
 import { EmojisComponent } from './emojis/emojis.component';
 import { FundamentalsComponent } from './fundamentals/fundamentals.component';
@@ -53,6 +54,7 @@ import { WarComponent } from './war/war.component';
     ChessComponent,
     ChromeComponent,
     CounterComponent,
+    DashboardComponent,
     DiceComponent,
     EmojisComponent,
     FundamentalsComponent,

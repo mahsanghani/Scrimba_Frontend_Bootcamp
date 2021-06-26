@@ -16,6 +16,7 @@ import {Challenges5Component} from "./challenges5/challenges5.component";
 import {ChessComponent} from "./chess/chess.component";
 import {ChromeComponent} from "./chrome/chrome.component";
 import {CounterComponent} from "./counter/counter.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 import {DiceComponent} from "./dice/dice.component";
 import {EmojisComponent} from "./emojis/emojis.component";
 import {FundamentalsComponent} from './fundamentals/fundamentals.component';
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'chess', component: ChessComponent },
   { path: 'chrome', component: ChromeComponent },
   { path: 'counter', component: CounterComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'dice', component: DiceComponent},
   { path: 'emojis', component: EmojisComponent },
   { path: 'fundamentals', component: FundamentalsComponent },
