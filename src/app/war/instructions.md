@@ -76,3 +76,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/children
 # Challenge:
 - Display the final winner in the header at the top by replacing the text of the h2.
 
+# Challenge:
+- Change async operations below to use async/await instead of .then()
+

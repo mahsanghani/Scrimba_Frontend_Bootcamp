@@ -21,8 +21,42 @@ export class WarComponent implements OnInit {
 
   ngOnInit(): void {
     const handleClick = () => {
-      this.deckId
-      const handleClick = () => {
+      const handleClick = async () => {
+        const res = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+        const data = await res.json()
+        this.remainingText.textContent = `Remaining cards: ${data.remaining}`
+        this.deckId = data.deck_id
+        console.log(this.deckId)
+      }
+
+      this.newDeckBtn.addEventListener("click", handleClick)
+
+      this.drawCardBtn.addEventListener("click", async () => {
+        const res = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${this.deckId}/draw/?count=2`)
+        const data = await res.json()
+        this.remainingText.textContent = `Remaining cards: ${data.remaining}`
+        this.cardsContainer.children[0].innerHTML = `
+        <img src=${data.cards[0].image} class="card" />
+    `
+        this.cardsContainer.children[1].innerHTML = `
+        <img src=${data.cards[1].image} class="card" />
+    `
+        const winnerText = determineCardWinner(data.cards[0], data.cards[1])
+        this.header.textContent = winnerText
+
+        if (data.remaining === 0) {
+          this.drawCardBtn.disabled = true
+          if (this.computerScore > this.myScore) {
+            this.header.textContent = "The computer won the game!"
+          } else if (this.myScore > this.computerScore) {
+            this.header.textContent = "You won the game!"
+          } else {
+            this.header.textContent = "It's a tie game!"
+          }
+        }
+      })
+
+      /*const handleClick = () => {
         fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
           .then(res => res.json())
           .then(data => {
@@ -62,7 +96,7 @@ export class WarComponent implements OnInit {
               }
             }
           })
-      })
+      })*/
       const determineCardWinner = (card1: { value: string; }, card2: { value: string; }) => {
         const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9",
           "10", "JACK", "QUEEN", "KING", "ACE"]
