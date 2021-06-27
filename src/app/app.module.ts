@@ -24,6 +24,7 @@ import { DiceComponent } from './dice/dice.component';
 import { EmojisComponent } from './emojis/emojis.component';
 import { FlexComponent } from './flex/flex.component';
 import { FundamentalsComponent } from './fundamentals/fundamentals.component';
+import { GridComponent } from './grid/grid.component';
 import { LizardsComponent } from './lizards/lizards.component';
 import { ModalComponent } from './modal/modal.component';
 import { PacmanComponent } from './pacman/pacman.component';
@@ -61,6 +62,7 @@ import { WarComponent } from './war/war.component';
     EmojisComponent,
     FlexComponent,
     FundamentalsComponent,
+    GridComponent,
     LizardsComponent,
     ModalComponent,
     PacmanComponent,

@@ -21,6 +21,7 @@ import {DiceComponent} from "./dice/dice.component";
 import {EmojisComponent} from "./emojis/emojis.component";
 import {FlexComponent} from "./flex/flex.component";
 import {FundamentalsComponent} from './fundamentals/fundamentals.component';
+import {GridComponent} from './grid/grid.component';
 import {LizardsComponent} from "./lizards/lizards.component";
 import {ModalComponent} from "./modal/modal.component";
 import {PacmanComponent} from "./pacman/pacman.component";
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'emojis', component: EmojisComponent },
   { path: 'flex', component: FlexComponent },
   { path: 'fundamentals', component: FundamentalsComponent },
+  { path: 'grid', component: GridComponent },
   { path: 'lizards', component: LizardsComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'pacman', component: PacmanComponent },
