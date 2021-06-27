@@ -19,10 +19,12 @@ import {CounterComponent} from "./counter/counter.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {DiceComponent} from "./dice/dice.component";
 import {EmojisComponent} from "./emojis/emojis.component";
+import {FlexComponent} from "./flex/flex.component";
 import {FundamentalsComponent} from './fundamentals/fundamentals.component';
 import {LizardsComponent} from "./lizards/lizards.component";
 import {ModalComponent} from "./modal/modal.component";
 import {PacmanComponent} from "./pacman/pacman.component";
+import {PhotosComponent} from "./photos/photos.component";
 import {PromiseComponent} from "./promise/promise.component";
 import {RejectionComponent} from "./rejection/rejection.component";
 import {Responsive1Component} from "./responsive1/responsive1.component";
@@ -53,10 +55,12 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dice', component: DiceComponent},
   { path: 'emojis', component: EmojisComponent },
+  { path: 'flex', component: FlexComponent },
   { path: 'fundamentals', component: FundamentalsComponent },
   { path: 'lizards', component: LizardsComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'pacman', component: PacmanComponent },
+  { path: 'photos', component: PhotosComponent },
   { path: 'promise', component: PromiseComponent },
   { path: 'rejection', component: RejectionComponent },
   { path: 'responsive1', component: Responsive1Component},
